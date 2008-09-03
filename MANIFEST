@@ -1,0 +1,6 @@
+Changes
+lib/Tie/IxHash/FixedSize.pm
+Makefile.PL
+MANIFEST
+README
+t/basic.t

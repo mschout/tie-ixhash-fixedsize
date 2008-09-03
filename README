@@ -1,40 +1,48 @@
-Tie-IxHash-FixedSize version 0.01
-=================================
+NAME
+    Tie::IxHash::FixedSize - Tie::IxHash with a fixed maximum size
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+SYNOPSIS
+      use Tie::IxHash::FixedSize;
 
-A README file is required for CPAN modules since CPAN extracts the
-README file from a module distribution so that people browsing the
-archive can use it get an idea of the modules uses. It is usually a
-good idea to provide version information here so that people can
-decide whether fixes for the module are worth downloading.
+      tie my %h, 'Tie::IxHash::FixedSize', {size => 3},
+        one   => 1,
+        two   => 2,
+        three => 3;
 
-INSTALLATION
+      print join ' ', keys %h;   # prints 'one two three'
 
-To install this module type the following:
+      $h{four} = 4;  # key 'one' is removed, 'four' is added
 
-   perl Makefile.PL
-   make
-   make test
-   make install
+      print join ' ', keys %h;   # prints 'two three four'
 
-DEPENDENCIES
+ABSTRACT
+    Hashes tied to Tie::IxHash::FixedSize will only hold a fixed maximum
+    number of keys before automatically removing old keys.
 
-This module requires these other modules and libraries:
+DESCRIPTION
+    Hashes tied with Tie::IxHash::FixedSize behave exactly like normal
+    Tie::IxHash hashes, except the maximum number of keys that can be held
+    by the hash is limited by a specified "size". Once the number of keys in
+    the hash exceeds this size, the oldest keys in the hash will
+    automatically be removed.
 
-  blah blah blah
+    The "size" parameter to "tie()" specifies the maximum number of keys
+    that the hash can hold. When the hash exceeds this number of keys, the
+    first entries in the hash will automatically be removed until the number
+    of keys in the hash does not exceed the size parameter. If no size
+    parameter is given, then the hash will behave exactly like a plan
+    Tie::IxHash, and the number of keys will not be limited.
 
-COPYRIGHT AND LICENCE
+SEE ALSO
+    Tie::IxHash
 
-Put the correct copyright and licence information here.
+AUTHOR
+    Michael Schout, <mschout@gkg.net>
 
-Copyright (C) 2008 by Michael Schout
+COPYRIGHT AND LICENSE
+    Copyright (C) 2008 by Michael Schout
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.8 or,
-at your option, any later version of Perl 5 you may have available.
-
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself, either Perl version 5.8.8 or, at
+    your option, any later version of Perl 5 you may have available.
 

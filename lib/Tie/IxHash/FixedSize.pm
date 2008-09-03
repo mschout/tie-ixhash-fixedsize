@@ -84,7 +84,7 @@ L<Tie::IxHash>
 
 =head1 AUTHOR
 
-Michael Schout, E<lt>mschout@E<gt>
+Michael Schout, E<lt>mschout@gkg.netE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

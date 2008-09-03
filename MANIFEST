@@ -1,6 +1,8 @@
 Changes
+INSTALL
 lib/Tie/IxHash/FixedSize.pm
 Makefile.PL
 MANIFEST
+MANIFEST.SKIP
 README
 t/basic.t

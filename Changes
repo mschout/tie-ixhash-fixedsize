@@ -1,4 +1,7 @@
 Revision history for Tie::IxHash::FixedSize.
 
+Current
+    - fix MANIFEST, add MANIFEST.SKIP
+
 0.01  2008-09-03
-      First version
+    - First version

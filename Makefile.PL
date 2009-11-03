@@ -3,6 +3,7 @@ use strict;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
+    (MM->can('signature_target') ? (SIGN => 1) : ()),
     NAME              => 'Tie::IxHash::FixedSize',
     AUTHOR            => 'Michael Schout <mschout@gkg.net>',
     ABSTRACT_FROM     => 'lib/Tie/IxHash/FixedSize.pm',

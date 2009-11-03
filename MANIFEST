@@ -6,3 +6,4 @@ MANIFEST
 MANIFEST.SKIP
 README
 t/basic.t
+t/signature.t

@@ -1,7 +1,10 @@
 Revision history for Tie::IxHash::FixedSize.
 
-Current
+1.00  Tue Nov 03 2009
+    - sign dist with Module::Signature
+    - add signature, signature test
     - fix MANIFEST, add MANIFEST.SKIP
+    - use my CPAN email address as author
 
-0.01  2008-09-03
+0.01  Wed Sep 03 2008
     - First version

@@ -4,7 +4,7 @@ use 5.006;
 use strict;
 use base 'Tie::IxHash';
 
-our $VERSION = '0.10';
+our $VERSION = '1.00';
 
 # location of size field in @$self. Tie::IxHash uses 0-3
 use constant SIZE_IX => 4;
@@ -78,18 +78,45 @@ does not exceed the size parameter.  If no size parameter is given, then the
 hash will behave exactly like a plan Tie::IxHash, and the number of keys will
 not be limited.
 
-=head1 SEE ALSO
+=head1 SOURCE
 
-L<Tie::IxHash>
+You can contribute or fork this project via github:
+
+http://github.com/mschout/tie-ixhash-fixedsize
+
+ git clone git://github.com/mschout/tie-ixhash-fixedsize.git
+
+=head1 BUGS
+
+Please report any bugs or feature requests to
+bug-tie-ixhash-fixedsize@rt.cpan.org, or through the web interface at
+http://rt.cpan.org/.
 
 =head1 AUTHOR
 
-Michael Schout, E<lt>mschout@gkg.netE<gt>
+Michael Schout E<lt>mschout@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
 Copyright (C) 2008 by Michael Schout
 
-This library is free software; you can redistribute it and/or modify it under
-the same terms as Perl itself, either Perl version 5.8.8 or, at your option,
-any later version of Perl 5 you may have available.
+This program is free software; you can redistribute it and/or
+modify it under the terms of either:
+
+=over 4
+
+=item *
+
+the GNU General Public License as published by the Free Software Foundation;
+either version 1, or (at your option) any later version, or
+
+=item *
+
+the Artistic License version 2.0.
+
+=back
+
+=head1 SEE ALSO
+
+L<Tie::IxHash>
+

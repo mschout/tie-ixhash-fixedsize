@@ -1,48 +1,34 @@
-NAME
-    Tie::IxHash::FixedSize - Tie::IxHash with a fixed maximum size
+Tie-IxHash-FixedSize
 
-SYNOPSIS
-      use Tie::IxHash::FixedSize;
+This module provides a Tie::IxHash that will only hold at most a fixed maximum
+number of keys.  When additional keys are added to the hash, the oldest keys
+are removed to make room for the new keys.
 
-      tie my %h, 'Tie::IxHash::FixedSize', {size => 3},
-        one   => 1,
-        two   => 2,
-        three => 3;
+INSTALLATION
 
-      print join ' ', keys %h;   # prints 'one two three'
+To install this module type the following:
 
-      $h{four} = 4;  # key 'one' is removed, 'four' is added
+    perl Makefile.PL
+    make
+    make test
+    make install
 
-      print join ' ', keys %h;   # prints 'two three four'
+DEPENDENCIES
 
-ABSTRACT
-    Hashes tied to Tie::IxHash::FixedSize will only hold a fixed maximum
-    number of keys before automatically removing old keys.
+This module requires these other modules and libraries:
 
-DESCRIPTION
-    Hashes tied with Tie::IxHash::FixedSize behave exactly like normal
-    Tie::IxHash hashes, except the maximum number of keys that can be held
-    by the hash is limited by a specified "size". Once the number of keys in
-    the hash exceeds this size, the oldest keys in the hash will
-    automatically be removed.
-
-    The "size" parameter to "tie()" specifies the maximum number of keys
-    that the hash can hold. When the hash exceeds this number of keys, the
-    first entries in the hash will automatically be removed until the number
-    of keys in the hash does not exceed the size parameter. If no size
-    parameter is given, then the hash will behave exactly like a plan
-    Tie::IxHash, and the number of keys will not be limited.
-
-SEE ALSO
     Tie::IxHash
 
-AUTHOR
-    Michael Schout, <mschout@gkg.net>
-
 COPYRIGHT AND LICENSE
-    Copyright (C) 2008 by Michael Schout
 
-    This library is free software; you can redistribute it and/or modify it
-    under the same terms as Perl itself, either Perl version 5.8.8 or, at
-    your option, any later version of Perl 5 you may have available.
+   Copyright (C) 2008 by Michael Schout
+
+   This program is free software; you can redistribute it and/or modify it
+   under the terms of either:
+
+   *   the GNU General Public License as published by the Free Software
+       Foundation; either version 1, or (at your option) any later
+       version, or
+
+   *   the Artistic License version 2.0.
 

@@ -1,5 +1,9 @@
 Revision history for Tie::IxHash::FixedSize.
 
+1.01  Fri Nov 13 2009
+    - disable signature test unless TEST_SIGNATURE is enabled, otherwise test
+      fails if keyserver is unreachable.
+
 1.00  Tue Nov 03 2009
     - sign dist with Module::Signature
     - add signature, signature test

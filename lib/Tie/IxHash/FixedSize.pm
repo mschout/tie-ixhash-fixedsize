@@ -9,8 +9,6 @@ use strict;
 use warnings;
 use parent 'Tie::IxHash';
 
-our $VERSION = '1.01';
-
 # location of size field in @$self. Tie::IxHash uses 0-3
 use constant SIZE_IX => 4;
 

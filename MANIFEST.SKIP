@@ -24,4 +24,5 @@
 
 ^MYMETA\.
 ^\.build$
+^\.travis\.yml$
 ^dist\.ini$

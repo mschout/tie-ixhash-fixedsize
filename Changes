@@ -1,6 +1,8 @@
 Revision history for Tie::IxHash::FixedSize.
 
 {{$NEXT}}
+
+1.02  2018-06-03
     - Use Dist::Zilla to build the dist.
     - Use parent.pm rather than base.pm
     - Make signature test an AUTHOR test

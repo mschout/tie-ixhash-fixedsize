@@ -1,8 +1,13 @@
+# COPYRIGHT
+
 package Tie::IxHash::FixedSize;
 
-use 5.006;
+# ABSTRACT: Tie::IxHash with a fixed maximum size
+
+use 5.008;
 use strict;
-use base 'Tie::IxHash';
+use warnings;
+use parent 'Tie::IxHash';
 
 our $VERSION = '1.01';
 
@@ -40,10 +45,6 @@ sub STORE {
 
 __END__
 
-=head1 NAME
-
-Tie::IxHash::FixedSize - Tie::IxHash with a fixed maximum size
-
 =head1 SYNOPSIS
 
   use Tie::IxHash::FixedSize;
@@ -59,11 +60,6 @@ Tie::IxHash::FixedSize - Tie::IxHash with a fixed maximum size
 
   print join ' ', keys %h;   # prints 'two three four'
 
-=head1 ABSTRACT
-
-Hashes tied to Tie::IxHash::FixedSize will only hold a fixed maximum number of
-keys before automatically removing old keys.
-
 =head1 DESCRIPTION
 
 Hashes tied with Tie::IxHash::FixedSize behave exactly like normal Tie::IxHash
@@ -78,45 +74,6 @@ does not exceed the size parameter.  If no size parameter is given, then the
 hash will behave exactly like a plan Tie::IxHash, and the number of keys will
 not be limited.
 
-=head1 SOURCE
-
-You can contribute or fork this project via github:
-
-http://github.com/mschout/tie-ixhash-fixedsize
-
- git clone git://github.com/mschout/tie-ixhash-fixedsize.git
-
-=head1 BUGS
-
-Please report any bugs or feature requests to
-bug-tie-ixhash-fixedsize@rt.cpan.org, or through the web interface at
-http://rt.cpan.org/.
-
-=head1 AUTHOR
-
-Michael Schout E<lt>mschout@cpan.orgE<gt>
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright (C) 2008 by Michael Schout
-
-This program is free software; you can redistribute it and/or
-modify it under the terms of either:
-
-=over 4
-
-=item *
-
-the GNU General Public License as published by the Free Software Foundation;
-either version 1, or (at your option) any later version, or
-
-=item *
-
-the Artistic License version 2.0.
-
-=back
-
 =head1 SEE ALSO
 
 L<Tie::IxHash>
-

@@ -21,3 +21,7 @@
 
 \.swp$
 .gitignore
+
+^MYMETA\.
+^\.build$
+^dist\.ini$
